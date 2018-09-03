@@ -24,7 +24,7 @@ build:
 	@cd channel && docker-compose -f docker-compose-cli.yaml build
 
 	@echo "[Building chaincode...]"
-	@cd chaincode && go build
+	@cd chaincode && go build -v ./...
 
 # gen will generate all the channel artifacts and crypto configuration for the network
 gen:
@@ -44,7 +44,7 @@ gen:
 # env-up will launche the channel using the docker-compose file
 env-up:
 	@echo "[Starting environment...]"
-	@cd channel && docker-compose -f docker-compose-cli.yaml up -d
+	@cd channel && docker-compose -f docker-compose-cli.yaml -f docker-compose-couch.yaml up -d
 	@echo "[Environment up]"
 
 # clean will tear down the docker network and remove any crypto,channel assets
