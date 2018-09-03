@@ -74,11 +74,13 @@ services:
 
       #ORG1
       - ORG1_ANCHOR=${ORG1_ANCHOR}
+      - ORG1_MSP=${ORG1_MSP}
 
       # ORG2
       - ORG2_ANCHOR=${ORG2_ANCHOR}
       - ORG2_DOMAIN=${ORG2_DOMAIN}
       - ORG2_PORT=${ORG2_PORT}
+      - ORG2_MSP=${ORG2_MSP}
 
       # Default Variables
       - GOPATH=/opt/gopath
