@@ -20,7 +20,7 @@ peer channel update -o ${ORDERER_DOMAIN}:${ORDERER_PORT} -c ${CHANNEL_NAME} -f .
 peer channel update -o ${ORDERER_DOMAIN}:${ORDERER_PORT} -c ${CHANNEL_NAME} -f ./channel-artifacts/${ORG2_ANCHOR}.tx --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/${CHANNEL_DOMAIN}/orderers/${ORDERER_DOMAIN}/msp/tlscacerts/tlsca.${CHANNEL_DOMAIN}-cert.pem
 
 # Install Chaincode
-peer chaincode install -n ${CHAINCODE_NAME} -v 1.0 -p github.com/chaincode/
+peer chaincode install -n ${CHAINCODE_NAME} -v 1.0 -p ${CHAINCODE_FOLDER}
 
 # Keep CLI alive
 sleep infinity
