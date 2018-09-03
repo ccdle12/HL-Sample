@@ -51,11 +51,11 @@ Update the ```.env``` file in ```/channel``` to install this Chaincode when runn
 CHAINCODE_FOLDER=github.com/chaincode/marbles/
 ```
 
-### Use the CLI
+## Use the CLI
 When all the containers have been brought up, exec into the cli container:
 ```docker exec -it cli /bin/bash```
 
-### Instantiate example02 Chaincode
+## Instantiate example02 Chaincode
 Instantiate the Chaincode giving "a" 100 and "b" 200:
 
 #### NOTE:
@@ -77,7 +77,7 @@ Invoke the Chaincode by sending 10 tokens from "a" to "b"
 
 Call query on "a" again to check that the query returns ```90``` meaning ```10``` has been sent to ```b```
 
-### Instantiate marbles Chaincode
+## Instantiate marbles Chaincode
 #### Instantiate the Chaincode
 
 ```peer chaincode instantiate -o ${ORDERER_DOMAIN}:${ORDERER_PORT} --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/${CHANNEL_DOMAIN}/orderers/${ORDERER_DOMAIN}/msp/tlscacerts/tlsca.${CHANNEL_DOMAIN}-cert.pem -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} -v 1.0 -c '{"Args":["init"]}' -P "OR ('${ORG1_MSP}.peer','${ORG2_MSP}.peer')"```
