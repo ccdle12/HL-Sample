@@ -7,7 +7,7 @@ Make sure you have setup your environment according to the Hyper Ledger Fabric i
 your channel.
 
 ## Overview of running the project
-* Update ```.env``` file in ```/channel``` to choose the chaincode to deploy
+* [Update ```.env``` file in ```/channel``` to choose the chaincode to deploy](#Chaincode)
 * Start the Network
 * Exec into the CLI container
 * Instantiate the Chaincode
@@ -20,7 +20,9 @@ your channel.
 ### Stop the Network
 ```make clean```
 
-## Chain Code
+<h2 id="Chaincode">
+  Chain Code
+</h2>
 There are currently two Chaincodes that can be deployed:
 * ```example02```
 * ```marbles```
