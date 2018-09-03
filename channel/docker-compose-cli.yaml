@@ -82,6 +82,9 @@ services:
       - ORG2_PORT=${ORG2_PORT}
       - ORG2_MSP=${ORG2_MSP}
 
+      # Chain Code
+      - CHAINCODE_FOLDER=${CHAINCODE_FOLDER}
+
       # Default Variables
       - GOPATH=/opt/gopath
       - CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock
