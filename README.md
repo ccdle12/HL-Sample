@@ -7,13 +7,16 @@ Make sure you have setup your environment according to the Hyper Ledger Fabric i
 your channel.
 
 ## Overview of running the project
-* [Update ```.env``` file in ```/channel``` to choose the chaincode to deploy](#Chaincode)
-* Start the Network
-* Exec into the CLI container
-* Instantiate the Chaincode
-* Call read/write queries on the Chaincode
+1. [Update ```.env``` file in ```/channel``` to choose the chaincode to deploy](#Chaincode)
+2. [Start the Network](#StartNetwork)
+3. [Exec into the CLI container](#UseCLI)
+4. Instantiate the Chaincode
+5. Call read/write queries on the Chaincode
 
-## Getting Started
+<h2 id="StartNetwork">
+  Getting Started
+</h2>
+
 ### Start the Network
 ```make```
 
@@ -53,7 +56,9 @@ Update the ```.env``` file in ```/channel``` to install this Chaincode when runn
 CHAINCODE_FOLDER=github.com/chaincode/marbles/
 ```
 
-## Use the CLI
+<h2 id="UseCLI">
+  Use the CLI
+</h2>
 When all the containers have been brought up, exec into the cli container:
 ```docker exec -it cli /bin/bash```
 
