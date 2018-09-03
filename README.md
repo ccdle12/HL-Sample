@@ -26,7 +26,9 @@ your channel.
 <h2 id="Chaincode">
   Chain Code
 </h2>
+
 There are currently two Chaincodes that can be deployed:
+
 * ```example02```
 * ```marbles```
 
@@ -59,7 +61,9 @@ CHAINCODE_FOLDER=github.com/chaincode/marbles/
 <h2 id="UseCLI">
   Use the CLI
 </h2>
+
 When all the containers have been brought up, exec into the cli container:
+
 ```docker exec -it cli /bin/bash```
 
 ## Instantiate example02 Chaincode
