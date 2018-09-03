@@ -35,6 +35,8 @@ Query the Chain Code to check that "a" has received 100:
 
 ### Invoke the Chain Code
 Invoke the Chain Code by sending 10 tokens from "a" to "b"
+
+
 ```peer chaincode invoke -o ${ORDERER_DOMAIN}:${ORDERER_PORT} --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/${CHANNEL_DOMAIN}/orderers/${ORDERER_DOMAIN}/msp/tlscacerts/tlsca.${CHANNEL_DOMAIN}-cert.pem -C ${CHANNEL_NAME} -n ${CHAINCODE_NAME} -c '{"Args":["invoke","a","b","10"]}'```
 
 Call query on "a" again to check that the query returns ```90``` meaning ```10``` has been sent to ```b```
